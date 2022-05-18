@@ -1,3 +1,4 @@
+const mensagem = require('../libs/mensagem')
 const Sequelize = require('sequelize')
 const connection = require('./database')
 
@@ -18,9 +19,9 @@ const noticia = connection.define('noticia',{
 
 
 noticia.sync({force:false}).then(()=>{
-    console.log(`\nbanco de dados sincronizado !\n`)
+    mensagem(`banco de dados sincronizado !`)
 }).catch((err)=>{
-    console.log(`\nerro ao registrar noticia ${err}\n`)
+    mensagem(`erro ao registrar noticia ${err}`)
 })
 
 
