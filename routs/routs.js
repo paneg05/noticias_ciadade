@@ -1,4 +1,5 @@
 const routs = (server)=>{
+    //rotas
 
     server.get('/',(req,res)=>{
         res.render('index')
