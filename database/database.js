@@ -1,31 +1,18 @@
 const mensagem = require('../libs/mensagem')
-const mysql = require('mysql2/promise')
+const mysql = require('mysql2')
+const connection = mysql.createConnection({
+
+    host:'localhost',
+    password:"93153626",
+    user:'root',
+    database:'noticias_cidade'
+
+})
 
 
-
-module.exports=(query)=>{
-    const connection = mysql.createConnection({
-        host:'localhost',
-        password:"93153626",
-        user:'root',
-        database:'noticias_cidade'
+module.exports = connection
     
-    },()=>{
-        let query=''
-    }).then(
-        mensagem('banco de dados connectado !')
-    ).then(
-        conn=>conn.query(query).then(
-            ([row,field])=>{
-                return row
-            }
-        )
-    ).catch(
-       (err)=>{
-        console.log(err)
-       }
-    )
-}
+
 
 
 
