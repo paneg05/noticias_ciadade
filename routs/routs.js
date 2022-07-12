@@ -2,7 +2,17 @@ const routs = (server)=>{
     //rotas
 
     server.get('/',(req,res)=>{
-        res.render('index')
+        
+
+         const con = require("../database/database")
+
+         con.query(
+            'select * from noticia',(err,result)=>{
+                res.render('index',{noticia: result})
+            }
+         )
+        
+        
     })
     
     server.get('/escrever',(req,res)=>{
@@ -10,7 +20,9 @@ const routs = (server)=>{
     })
     
     server.get('/brasil',(req,res)=>{
+
         res.render('brasil')
+       
     })
     
     server.get('/internacional',(req,res)=>{
