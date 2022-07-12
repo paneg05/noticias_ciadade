@@ -1,6 +1,11 @@
 const Express = require('express')
 const server = Express()
 const bodyParser = require('body-parser')
+const consign = require('consign')
+
+//rotas
+consign().include('routs').then('database/database.js').into(server)
+
 
 //configurando express
 server.use(Express.text())
