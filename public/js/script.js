@@ -16,13 +16,13 @@ function activeLink(){
 
 body.addEventListener('onload',activeLink())
 
-setTimeout(() => {
-    if(window.location.pathname == '/'){
-        body.id='tres-colunas'
-    }else{
-        body.id='duas-colunas'
-    }
-}, 50);
+
+
+if(window.location.pathname == '/'){
+    body.id='tres-colunas'
+}else{
+    body.id='duas-colunas'
+}
 
 
 //setInterval(() => {

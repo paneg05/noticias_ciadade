@@ -7,12 +7,12 @@ module.exports = (server)=>{
         
 
         let con = server.database.database()
+        let noticiaModel = server.models.noticiasModels
 
-        con.query(
-           'select * from noticia',(err,result)=>{
-               res.render('index',{noticia: result})
-           }
-        )
+        noticiaModel.getNoticia(con,(err,result)=>{
+            res.render('index',{noticia: result})
+       
+        })
        
        
     })
