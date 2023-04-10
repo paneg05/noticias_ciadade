@@ -4,7 +4,38 @@
     <div class="conteudo clear">
 
         <div id="primario">
-            primario
+            <div class="caixa destaque">
+                <h2>Destaque</h2>
+                <div class="caixa-conteudo">
+                    <h3><%= noticia[0].titulo %></h3>
+                    <img class="imagem-principal" src="img/taxi.jpg">
+                    <p>
+                        <%= noticia[0].descricao%>
+                    </p>
+                    <a href="#">Leia mais!</a>
+                </div>
+            </div>
+            
+            <div class="caixa">
+                <h2>Mundo</h2>
+                <div class="caixa-conteudo">
+                    <ul id="lista-noticias">
+                        <% noticia.forEach((el,i)=>{ %>
+                            <li>
+                                <a href="#" class="item">
+                                    
+                                    <img src="img/tecnologia.jpg" width="80">
+                                    <div>
+                                        <h3><%= el.titulo %></h3>
+                                        <p><%= el.descricao %></p>
+                                    </div>
+                                    
+                                </a>
+                            </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
         </div>
     
         

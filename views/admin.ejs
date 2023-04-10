@@ -1,0 +1,34 @@
+<%- include('layout/head.ejs') %>
+    <%- include('partials/topo') %>
+
+        <form action="/noticias/salvar" method="post">
+            <div class="conteudo-entrevista clear">
+                <div class="titulo">
+                    
+                    <div>
+                        <label class="nome_entrevistado" for="titulo">titulo:</label>
+                        <input type="text" name="titulo" id="entrevistado">
+                    </div>
+
+                    <div>
+                        <label class="nome_entrevistado" for="nome_entrevistado">Entrevistado:</label>
+                        <input type="text" name="entrevistado" id="entrevistado">
+                    </div>
+                    
+                </div>
+                <label class="nome_entrevistado" for="descricao">descricao:</label>
+                <input type="text" name="descricao">
+                
+                <textarea name='noticia'id="entrevista"></textarea>
+                <button type="submit"  class="butao" id="butao-entrevista">Enviar</button>
+            </div>  
+        </form>
+
+
+
+
+
+
+
+
+<%- include('layout/footer') %>

@@ -1,27 +1,13 @@
-const routs = (server)=>{
-    
-    //rotas
+module.exports=(server)=>{
+    server.get('/noticia',(req,res)=>{
+        const con=server.database.database()
+        const noticiasModel = server.models.noticiasModels
 
-    
-    
-    server.get('/escrever',(req,res)=>{
-        res.render('escrever')
+        noticiasModel.getNoticias(con,(err,result)=>{
+            res.send({result})
+        })
+
+       
+      
     })
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
 }
-
-
-module.exports = routs
-

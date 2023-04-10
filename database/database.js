@@ -5,7 +5,7 @@ let connection =function (){
      return mysql.createConnection({
 
         host:'localhost',
-        password:"93153626",
+        password:process.env.DB_PASSWORD,
         user:'root',
         database:'noticias_cidade'
     
@@ -18,7 +18,6 @@ let connection =function (){
 module.exports = function(){
     return connection
 }
-    
 
 
 

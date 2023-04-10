@@ -11,8 +11,8 @@ server.use(bodyParser.json())
 
 
 //rotas
-consign().include('routs').then('database/database.js').then('models').into(server)
-
+consign().include('routs').into(server).then('database/database.js').into(server)
+consign().include('models').into(server).then('controllers').into(server)
 
 //configurando express
 server.use(Express.text())

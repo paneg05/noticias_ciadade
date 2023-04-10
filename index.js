@@ -1,4 +1,5 @@
 
+require('dotenv').config()
 const mensagem= require('./libs/mensagem')
 const server = require('./server/server')
 const port = process.env.PORT | 8080
